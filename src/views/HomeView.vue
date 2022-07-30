@@ -128,7 +128,7 @@ async function handleSearch() {
   await axios.get(`https://exercisedb.p.rapidapi.com/exercises/target/${chosenTargetMuscle.value}`,
     {
       headers: {
-        'X-RapidAPI-Key': process.env.X_RAPIDAPI_KEY,
+        'X-RapidAPI-Key': process.env.VUE_APP_X_RAPIDAPI_KEY,
         'X-RapidAPI-Host': 'exercisedb.p.rapidapi.com'
       }
     }
