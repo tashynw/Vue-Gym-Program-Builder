@@ -13,6 +13,21 @@ body{
 .app{
   min-height: 700px;
 }
+::-webkit-scrollbar-track
+{
+  background-color: white;
+}
+
+::-webkit-scrollbar
+{
+  width: 10px;
+  background-color: white;
+}
+
+::-webkit-scrollbar-thumb
+{
+  background-color: rgb(44, 130, 224);
+}
 </style>
 <script setup lang="ts">
 import HomeNavbar from './components/HomeNavbar.vue'
