@@ -17,4 +17,8 @@ body{
 <script setup lang="ts">
 import HomeNavbar from './components/HomeNavbar.vue'
 import HomeFooter from './components/HomeFooter.vue'
+import { onMounted } from 'vue'
+onMounted(() => {
+  if (!localStorage.getItem('program')) localStorage.setItem('program', JSON.stringify([]))
+})
 </script>
