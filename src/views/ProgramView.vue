@@ -55,12 +55,11 @@ function handleShow(newExercise: ExerciseResultType): void {
   showModal.value = !showModal.value
 }
 function removeExercise(exerciseToDelete: ExerciseResultType) {
-  init('Removing...')
   let program: ExerciseResultType[] = programList.value
   program = program.filter((exercise) => exercise !== exerciseToDelete)
   localStorage.setItem('program', JSON.stringify(program))
   programList.value = program
-  init({ message: 'Success!', color: 'success' })
+  init({ message: 'Removed!', color: 'success' })
   showModal.value = false
 }
 </script>

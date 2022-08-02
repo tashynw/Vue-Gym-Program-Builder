@@ -84,12 +84,11 @@ function handleShow(newExercise: ExerciseResultType): void {
   showModal.value = !showModal.value
 }
 function addToProgram(exercise: ExerciseResultType): void {
-  init('Adding to Program...')
   const exerciseToAdd: ExerciseResultType = JSON.parse(JSON.stringify(exercise))
   const programContents: ExerciseResultType[] = JSON.parse(localStorage.getItem('program'))
   if (programContents?.length < 1) {
     localStorage.setItem('program', JSON.stringify([exerciseToAdd]))
-    init({ message: 'Success!', color: 'success' })
+    init({ message: 'Added!', color: 'success' })
     showModal.value = false
     return
   }
